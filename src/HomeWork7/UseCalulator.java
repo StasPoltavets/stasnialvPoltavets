@@ -8,11 +8,11 @@ public class UseCalulator {
         switch (typeCalc) {
             case "Basic":
                 CalculatorBasic calcBasic = new CalculatorBasic();
-                calcBasic.processWorkCalc();
+                calcBasic.processWorksCalc();
                 break;
             case "Pro":
                 CalculatorPro calculatorPro = new CalculatorPro();
-                calculatorPro.processWorkCalc();
+                calculatorPro.processWorksCalc();
                 break;
 
         }

@@ -54,7 +54,7 @@ public class CalculatorBasic {
 
     public void getDivision() {System.out.println(num1 / num2);}
 
-    public void processWorkCalc() {
+    public void processWorksCalc() {
             setNum();
             setOperation();
             executeOperation();
