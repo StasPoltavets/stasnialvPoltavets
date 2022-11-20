@@ -24,7 +24,7 @@ public class CalculatorPro extends CalculatorBasic {
         System.out.println("Sin( " + num2 + " ) = " + num1);
     }
     @Override
-    public void processWorkCalc() {
+    public void processWorksCalc() {
             System.out.println("Виберіть дію sin, sqrt");
             setOperation();
             executeOperation();
