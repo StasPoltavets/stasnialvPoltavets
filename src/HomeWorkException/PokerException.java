@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class PokerException {
     private static int cardsPerPlayer = 52;
-    public static int players = 1;
+    public static int players = 2;
 
     private static String[] cards = new String[cardsPerPlayer];
 
@@ -32,19 +32,23 @@ public class PokerException {
             int r = random.nextInt(cardsPerPlayer);
             int s =random.nextInt(players);
 
-//            if (players <= 1) {                                     // прокинув ексепшин на недостатність графців
-//                throw new RuntimeException("Не достатньо гравців");
-//            }
+
+            if (players <= 1) {                                     // прокинув ексепшин на недостатність графців
+                throw new NotFoundPlayers("Не достатньо гравців");
+            }
 
             String temp = cards[r];
             cards[r] = cards[s];
             cards[s] = temp;
+
+           // throw new NotFoundPlayers();
+
         }
     }
     private static void startDisplay (){
         try {
             int index =0;
-            for (int round = 1; round <=55; round++){
+            for (int round = 1; round <=5; round++){
                 System.out.println("Роздача "+ round);
                 for (int player = 1; player<= players; player++){
 
