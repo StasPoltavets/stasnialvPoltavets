@@ -48,7 +48,7 @@
                            <!--                        <suiteXmlFile>testng.xml</suiteXmlFile>-->
                            <!--                    </suiteXmlFiles>-->
                            <systemPropertyVariables>
-                               <url>https://rel.site</url>
+                               <url>https://rel2Stage.site</url>
                            </systemPropertyVariables>
                        </configuration>
                    </plugin>
