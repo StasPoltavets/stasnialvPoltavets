@@ -1,6 +1,6 @@
 package ua.hillel.homework10;
 
-import java.util.ArrayList;
+import  java.util.ArrayList;
 import java.util.Random;
 //added something
 public class Cinderella {
