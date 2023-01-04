@@ -13,7 +13,7 @@ public class Cinderella {
 
         Random random = new Random();
         for (int i = 0; i < 100; i++) {
-            collection.add(random.nextInt(50));
+            collection.add(random.nextInt(60));
         }
         System.out.println("All numbers " + collection);
         for (int number : collection) {
