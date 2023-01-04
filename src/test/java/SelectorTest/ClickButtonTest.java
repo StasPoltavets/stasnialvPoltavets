@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ClickButtonTest {
-    final int collectionSize =11;
+   // final int collectionSize =11;
     @Test
     public void clickButtonTest() {
         WebDriverManager.chromedriver().setup();
@@ -23,16 +23,10 @@ public class ClickButtonTest {
                 driver.findElement(By.cssSelector(".alert.button")).click();
                 driver.findElement(By.cssSelector(".success.button")).click();
 
-                    List<Integer> list = new ArrayList<>();
-                    for (int i = 1; i < collectionSize; i++) {
-                        System.out.println(driver.findElement(By.cssSelector("div#content tr:nth-child(" +i+ ")> td:nth-child(4)")).getText());
 
-
-                        //tableData.add(driver.findElement(By.cssSelector("div#content tr:nth-child(" + i + ")> td:nth-child(4)")).getText());
-
-                        //System.out.println(tableData);
-
+        List<WebElement> links = driver.findElements(By.xpath("//tr/td[4]"));
+        links.forEach(w->System.out.println(w.getText()));
             driver.quit();
         }
     }
-}
+
