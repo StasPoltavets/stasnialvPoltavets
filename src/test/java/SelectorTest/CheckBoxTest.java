@@ -11,12 +11,12 @@ import org.testng.annotations.Test;
 
 public class CheckBoxTest {
     WebDriver driver = new ChromeDriver();
-    @BeforeTest
+    @BeforeTest //precondition
     public void beforeTest (){
         WebDriverManager.chromedriver().setup();
         driver.get("https://the-internet.herokuapp.com/checkboxes");
     }
-    @Test
+    @Test // test case
     public void checkBoxTest() {
         WebElement checkBoxOne = driver.findElement(By.xpath("//input[1]"));
         WebElement checkBoxTwo = driver.findElement(By.xpath("//input[2]"));
@@ -34,7 +34,7 @@ public class CheckBoxTest {
             checkBoxTwo.click();
         }
     }
-    @AfterTest
+    @AfterTest // finish our test
     public void afterTest(){
         driver.close();
     }

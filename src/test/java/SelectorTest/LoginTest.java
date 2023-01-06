@@ -20,6 +20,7 @@ public class LoginTest {
         driver.get("https://the-internet.herokuapp.com/login");
 }
     @Test
+    // success login test case
     public void validLoginTest() {
        WebElement username =driver.findElement(By.id("username"));
        WebElement password =driver.findElement(By.id("password"));
@@ -32,6 +33,7 @@ public class LoginTest {
     }
 
     @Test
+    // unsuccessful login test case
     public void invalidLoginTest(){
         WebElement username =driver.findElement(By.id("username"));
         WebElement password =driver.findElement(By.id("password"));
