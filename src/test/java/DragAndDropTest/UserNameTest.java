@@ -22,14 +22,12 @@ public class UserNameTest {
     }
     @Test
     public void userNameTest(){
-        Actions act = new Actions(driver);
-        List<Integer> list = new ArrayList<>();
-
+       Actions act = new Actions(driver);
         int count = driver.findElements(By.xpath("//*[@class ='example']/div/img[1]")).size();
         for (int i=1; i<=count; i++) {
             act.moveToElement(driver.findElement(By.xpath("//*[@class ='example']/div["+i+"]/img[1]"))).perform();
-            WebElement userNames =  driver.findElement(By.xpath("//h5[contains(text(), 'name: user"+i+"')]"));
-            System.out.println(userNames.getText());
+            WebElement userNames =  driver.findElement(By.xpath("//h5[contains(text(), ' user"+i+"')]"));
+            System.out.println(userNames.getText().replaceAll("name: ", ""));
         }
     }
     @AfterTest
