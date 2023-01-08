@@ -17,20 +17,24 @@ public class Cinderella {
         }
         System.out.println("All numbers " + collection);
         for (int number : collection) {
-            if (number % 2 == 0 && number % 5 == 0) {
-                basket1.add(number);
+            boolean isDividableByFive = number % 5 == 0;
+            boolean isDividableByTwo = number % 2 == 0;
+
+            boolean isSuitableForFirstBasket = isDividableByTwo;
+            boolean isSuitableForSecondBasket = isDividableByFive && number % 3 != 0;
+            boolean isSuitableForThirdBasket = !isDividableByFive && !isDividableByTwo;
+
+            if (isSuitableForSecondBasket) {
                 basket2.add(number);
-            } else if (number % 5 == 0) {
-                basket2.add(number);
-            } else if (number % 2 == 0) {
+            } else if (isSuitableForFirstBasket) {
                 basket1.add(number);
-            } else {
+            } else if (isSuitableForThirdBasket) {
                 basket3.add(number);
             }
         }
-        System.out.println("Number in the first basket " + basket1);
-        System.out.println("Number in the second basket " + basket2);
-        System.out.println("Number in the in the third basket " + basket3);
+        System.out.println("Number % 2 in the first basket " + basket1);
+        System.out.println("Number % 5 & % 3!=0 in the second basket " + basket2);
+        System.out.println("Number is not % 5 & % 2 in the in the third basket " + basket3);
     }
 
 }
