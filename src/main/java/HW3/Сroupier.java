@@ -1,11 +1,14 @@
 package HW3;
 
+import HomeWork8.ConsoleColors;
+
 import java.util.Random;
 
-public class Сroupier {
-    private int players = 5;
+public class Сroupier  {
+    private int players = 11;
 
     public Deck startDeck(){
+
         String[] suits = {"Піка", "Бубна", "Чирва", "Трефа"};
         String[] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Валет", "Королева", "Король", "Туз"};
 
@@ -34,6 +37,12 @@ public class Сroupier {
         for (int round = 1; round <=5; round++){
             System.out.println("Роздача "+ round);
             for (int player = 1; player<= players; player++){
+
+                Card card = deck.getCard(index++);
+                if (card.getRanks().equals("2")) {
+                 throw new RuntimeException(ConsoleColors.PURPLE_UNDERLINED +"Не так швидко солодкий!");
+                }
+
 
                 System.out.println(String.format("Гравець %d отримує карту %s%n ",player, deck.getCard(index++)));
             }
