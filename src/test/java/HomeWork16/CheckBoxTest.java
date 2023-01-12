@@ -1,7 +1,7 @@
 package HomeWork16;
 
 import org.testng.annotations.Test;
-import pages.CheckBoxesPage;
+import pagesHomeWork16.CheckBoxesPage;
 
 public class CheckBoxTest extends BaseTest {
 

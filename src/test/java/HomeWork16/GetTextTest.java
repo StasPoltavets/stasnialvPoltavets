@@ -1,7 +1,7 @@
 package HomeWork16;
 
 import org.testng.annotations.Test;
-import pages.ChallengingDOMPage;
+import pagesHomeWork16.ChallengingDOMPage;
 
 public class GetTextTest extends BaseTest{
     @Test

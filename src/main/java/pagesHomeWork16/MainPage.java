@@ -1,4 +1,4 @@
-package pages;
+package pagesHomeWork16;
 
 
 import org.openqa.selenium.WebDriver;

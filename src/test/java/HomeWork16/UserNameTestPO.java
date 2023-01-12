@@ -1,8 +1,7 @@
 package HomeWork16;
 
-import HomeWork16.BaseTest;
 import org.testng.annotations.Test;
-import pages.HoversPage;
+import pagesHomeWork16.HoversPage;
 
 public class UserNameTestPO extends BaseTest {
 

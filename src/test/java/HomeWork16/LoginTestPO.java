@@ -2,7 +2,7 @@ package HomeWork16;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.SecurePage;
+import pagesHomeWork16.SecurePage;
 
 
 
