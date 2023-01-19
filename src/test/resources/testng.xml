@@ -6,7 +6,7 @@
         <parameter name="passValue" value="777"/>
         <parameter name="roleValue" value="QA"/>
     <classes>
-        <class name="HomeWork.LoginTest"/>
+        <class name="HomeWork1.LoginTest"/>
     </classes>
 
 </test>

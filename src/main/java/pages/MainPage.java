@@ -1,4 +1,4 @@
-package pagesHomeWork16;
+package pages;
 
 
 import org.openqa.selenium.WebDriver;
@@ -16,6 +16,11 @@ public class MainPage extends BasePage {
     private WebElement checkBoxLink;
     @FindBy(linkText = "Challenging DOM")
     private WebElement challengingLink;
+    @FindBy (linkText = "File Download")
+    private WebElement fileDownloadLink;
+
+    @FindBy(linkText = "File Upload")
+    private  WebElement fileUploadLink;
 
     public MainPage(WebDriver driver){
         super(driver);
@@ -38,5 +43,13 @@ public class MainPage extends BasePage {
     public  ChallengingDOMPage challengingDOMPage(){
         clickButton(challengingLink);
         return new ChallengingDOMPage(driver);
+    }
+    public FileDownloadPage goToFileDownloadPage(){
+        clickButton(fileDownloadLink);
+        return new FileDownloadPage(driver);
+    }
+    public FileUploadPage goToFileUploadPage(){
+        clickButton(fileUploadLink);
+        return new FileUploadPage(driver);
     }
 }
