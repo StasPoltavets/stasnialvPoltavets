@@ -1,8 +1,8 @@
-package HomeWork16;
+package HomeWork;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pagesHomeWork16.SecurePage;
+import pages.SecurePage;
 
 
 
